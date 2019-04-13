@@ -2,6 +2,8 @@
 
 The minimalist [Pelican](http://blog.getpelican.com/) theme.
 
+This is a fork of the original Flex themes, with features needed by me ([renyuneyun](https://github.com/renyuneyun)).
+
 ## Notes
 
 - **DO NOT** send any questions to my personal email, they are **IGNORED**. If you have questions open an issue.
@@ -20,6 +22,7 @@ The minimalist [Pelican](http://blog.getpelican.com/) theme.
 - Minute read (via [plugin](https://github.com/getpelican/pelican-plugins/tree/master/post_stats)) (new in 2.0)
 - [Multiple Code Highlight Styles](https://github.com/alexandrevicenzi/Flex/wiki/Code-Highlight)
 - [Translation Support](https://github.com/alexandrevicenzi/Flex/wiki/Translations) (new in 2.0)
+- CJK auto-spacing (powered by [pangu.js](https://github.com/vinta/pangu.js))
 
 ## Integrations
 
