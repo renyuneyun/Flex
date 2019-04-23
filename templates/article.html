@@ -23,6 +23,19 @@
            when=article.locale_date,
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
 
+      {% if 'series' in PLUGINS %}
+        {% if article.series %}
+        &nbsp;
+        歸屬
+        {% for part_article in article.series.all %}
+          {% if part_article.title == article.series.name %}
+            <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ article.series.name }}</a>
+          {% endif %}
+        {% endfor %}
+        系列
+        {% endif %}
+      {% endif %}
+
       {% if 'post_stats' in PLUGINS %}
         &#8226; {{ article.stats['read_mins'] }} min read
       {% endif %}

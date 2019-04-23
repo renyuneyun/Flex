@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} &ndash; {{ _('Series') }}{% endblock %}
+
+{% block content %}
+<article class="single">
+  <header>
+    <h1>{{ _('Series') }}</h1>
+  </header>
+  <div>
+    {% for article in articles %}
+      {% if article.series and article.series.name == article.title %}
+      <div class="series">
+        <h2><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.series.name }}</a></h2>
+        <ol class="parts">
+          {% for part_article in article.series.all %}
+            {% if part_article != article %}
+            <li>
+              <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ol>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}
