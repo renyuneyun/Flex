@@ -11,6 +11,11 @@
     <ul class="list">
       {% for category, articles in categories|sort %}
       <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
+      {% if category.description %}
+      <div>
+        {{ category.description }}
+      </div>
+      {% endif %}
       {% endfor %}
     </ul>
   </div>
